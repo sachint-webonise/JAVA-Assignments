@@ -1,5 +1,6 @@
-
 package javaapplication1;
+
+import java.lang.reflect.Array;
 
 public class Triangle implements Polygon{
     

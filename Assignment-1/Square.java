@@ -1,4 +1,3 @@
-
 package javaapplication1;
 
 public class Square implements Polygon{
