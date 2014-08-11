@@ -20,12 +20,9 @@ public class ExceptionHandling {
     
     public static void main(String args[]) throws IOException{
         
-        Scanner scanner = null;
         String name="where";
         
-        try{
-            FileReader file = new FileReader("/home/webonise/JAVA/Assignment-3/sample");
-            scanner = new Scanner(file);
+        try(Scanner scanner = new Scanner(new FileReader("/home/webonise/JAVA/Assignment-3/sample"))){
             while (scanner.hasNextLine()){
                 String line = scanner.nextLine();
    
@@ -40,8 +37,6 @@ public class ExceptionHandling {
                e.printStackTrace();
         }
         
-        finally{
-            scanner.close();
-        }
+       
    }
 }
