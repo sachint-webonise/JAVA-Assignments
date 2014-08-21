@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- <filter>
+        <filter-name>ConnectionFilter</filter-name>
+        <filter-class>controller.ConnectionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ConnectionFilter</filter-name>
+        <servlet-name>PersonList</servlet-name>
+    </filter-mapping> -->
+    <servlet>
+        <servlet-name>PersonServlet</servlet-name>
+        <servlet-class>controller.PersonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PersonList</servlet-name>
+        <servlet-class>controller.PersonList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>controller.StudentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StudentList</servlet-name>
+        <servlet-class>controller.StudentList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonServlet</servlet-name>
+        <url-pattern>/PersonServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PersonList</servlet-name>
+        <url-pattern>/PersonList.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/StudentServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentList</servlet-name>
+        <url-pattern>/StudentList.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

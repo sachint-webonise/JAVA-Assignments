@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   
+    <class name="mybean.Student" table="Student">
+        <id name="id" type="int" column="studentid">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        
+        <set name="teachers" table="Student_Teacher" cascade="save-update" lazy="false">
+            <key column="studentid"/>
+            <many-to-many class="mybean.Teacher" column="teacherid "/>
+        </set>
+    </class>
+    
+    
+    <class name="mybean.Teacher" table="Teacher">
+        <id name="id" type="int" column="teacherid">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        
+        <set name="students" table="Student_Teacher" cascade="save-update" inverse="true" lazy="false">
+            <key column="teacherid"/>
+            <many-to-many class="mybean.Student" column="studentid"/>
+        </set>
+    </class>
+   
+    
+</hibernate-mapping>
+
