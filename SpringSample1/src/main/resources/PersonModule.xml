@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="personBean" class="com.webonise.person.Person">
+		<property name="name" value="Sachin"></property>
+	</bean>
+	
+	<bean id="votercard" class="com.webonise.person.VoterCard">
+		<property name="serialid"><value>123456</value> </property>
+		<property name="employee" ref="employeeBean"/>
+	</bean>
+	
+	<bean id="employeeBean" class="com.webonise.person.Employee">
+		<property name="firstname"><value>Sachin</value></property>
+		<property name="lastname"><value>Tiwari</value></property>
+	</bean>
+</beans>

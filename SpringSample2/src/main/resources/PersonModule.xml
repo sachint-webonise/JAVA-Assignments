@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="PersonModule2.xml"></import>
+	<bean id="firstperson" class="Person" >
+		<property name="firstname" value="Sachin"></property>
+		<property name="lastname" value="Tiwari"></property>
+	</bean>
+	
+	<bean id="firstbox" class="Box" >
+		<property name="length" value="10"></property>
+		<property name="width" value="10"></property>
+		<property name="height" value="10"></property>
+	</bean>
+
+</beans>

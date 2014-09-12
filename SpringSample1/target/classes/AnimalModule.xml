@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="animaltype" class="com.webonise.animal.AnimalImpl">
+		<property name="animaltype" ref="cat"></property>
+	</bean>
+	
+	<bean id="animaltype2" class="com.webonise.animal.AnimalImpl2">
+		<constructor-arg>
+			<ref bean= "dog"/>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="dog" class="com.webonise.animal.Dog"></bean>
+	<bean id="cat" class="com.webonise.animal.Cat"></bean> 
+	
+	
+</beans>
